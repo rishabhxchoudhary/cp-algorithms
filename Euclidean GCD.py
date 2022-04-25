@@ -1,4 +1,3 @@
-from time import time
 # Recursive Approach
 def recur_GCD(a,b):
     if b==0:
