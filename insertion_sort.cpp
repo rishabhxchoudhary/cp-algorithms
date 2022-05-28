@@ -6,12 +6,13 @@ int main(){
 
     // insertion sort
     for(int j=2;j<n;j++){
+        int key=a[j];
         int i=j-1;
-        while(i>0 && a[i]>a[j]){
+        while(i>0 && a[i]>key){
             a[i+1]=a[i];
             i--;
         }
-        a[i+1]=a[j];
+        a[i+1]=key;
     }
     for(int i=0;i<n;i++){
         cout<<a[i]<<" ";
