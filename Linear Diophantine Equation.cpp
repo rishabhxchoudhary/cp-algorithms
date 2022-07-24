@@ -26,11 +26,17 @@ bool LDE(int a,int b,int c,int &x,int &y){
     if (c%g!=0) return false;
     x=xg*(c/g);
     y = yg*(c/g);
+    if (a<0){
+        x = x*-1;
+    }
+    if (b<0){
+        y = y*-1;
+    }
     return true;
 }
 
 int main(){
-    int a=3,b=4,c=7,x,y;
+    int a=-3,b=4,c=7,x,y;
     bool check =LDE(a,b,c,x,y);
     if (check){
         cout<<"x : "<<x<<" y :"<<y;
